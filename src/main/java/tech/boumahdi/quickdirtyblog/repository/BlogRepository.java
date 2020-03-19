@@ -9,4 +9,5 @@ import java.util.List;
 @RepositoryRestResource
 public interface BlogRepository extends JpaRepository<Blog, Long> {
     List<Blog> findByTitleContainingIgnoreCase(String title);
+    List<BlogRepository> findAllByAuthorId(String id);
 }

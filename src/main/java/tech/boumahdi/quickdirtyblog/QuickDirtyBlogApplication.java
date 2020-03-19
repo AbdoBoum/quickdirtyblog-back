@@ -4,9 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import tech.boumahdi.quickdirtyblog.web.BlogController;
 
-import java.time.Instant;
 import java.util.Calendar;
 
 @SpringBootApplication
