@@ -25,11 +25,11 @@ public class Blog {
     @Column(columnDefinition = "text")
     private String content;
 
-    private String imgUrl;
-
     private String tags;
 
     private String date;
+
+    private boolean draft;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Author author;
