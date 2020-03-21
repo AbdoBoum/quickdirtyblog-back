@@ -38,6 +38,11 @@ public class BlogController {
         return blogRepository.findAll(pageable);
     }
 
+    @GetMapping("/blogs/published")
+    Page<Blog> getPublishedBlogs(Pageable pageable) {
+        return blogRepository.findAllByDraftFalse(pageable);
+    }
+
     @GetMapping("/blog/{id}")
     ResponseEntity<?> getBlog(@PathVariable Long id) {
         Optional<Blog> blog = blogRepository.findById(id);
